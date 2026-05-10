@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
 import { Store } from 'lucide-react';
-import coniargentoImg from '../../assets/1fd3fdaf3e0cc7ff164367c489208cf089aaeec1.png';
-import coniargento60Img from '../../assets/b1f980fd77ef9ef6ecabc0533db3b7c8721031eb.png';
-import hellfireImg from '../../assets/f4f6f0a7fa84d82374cc959084689941e178c905.png';
-import blueMoonImg from '../../assets/b72680e3178d862efc170f7a2d32be12b889a191.png';
+import coniargentoImg from 'figma:asset/1fd3fdaf3e0cc7ff164367c489208cf089aaeec1.png';
+import coniargento60Img from 'figma:asset/b1f980fd77ef9ef6ecabc0533db3b7c8721031eb.png';
+import hellfireImg from 'figma:asset/f4f6f0a7fa84d82374cc959084689941e178c905.png';
+import blueMoonImg from 'figma:asset/b72680e3178d862efc170f7a2d32be12b889a191.png';
 
 const products = [
   {
@@ -88,7 +88,7 @@ export function Products() {
               <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={`${product.name} - fuochi d'artificio Pirotecnica Enea`}
                   className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

@@ -5,37 +5,37 @@ const galleryImages = [
   {
     id: 1,
     src: 'https://images.unsplash.com/photo-1771299217601-93f892f9942f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJld29ya3MlMjBkaXNwbGF5JTIwY2VsZWJyYXRpb258ZW58MXx8fHwxNzc0ODA1MTczfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Spettacolo pirotecnico',
+    alt: 'spettacolo di fuochi d\'artificio professionale Pirotecnica Enea per celebrazione',
     span: 'col-span-2 row-span-2',
   },
   {
     id: 2,
     src: 'https://images.unsplash.com/photo-1543718290-a207a786243a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMGZpcmV3b3JrcyUyMHNob3d8ZW58MXx8fHwxNzc0ODA1MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Fuochi d\'artificio colorati',
+    alt: 'fuochi d\'artificio colorati per matrimonio ed eventi speciali',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 3,
     src: 'https://images.unsplash.com/photo-1636529174395-0fe6d7484f9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJld29ya3MlMjBiYXR0ZXJ5JTIwbmlnaHQlMjBza3l8ZW58MXx8fHwxNzc0ODA1MTc0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Batterie pirotecniche',
+    alt: 'batterie pirotecniche professionali notturne',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 4,
     src: 'https://images.unsplash.com/photo-1704399527621-82de0422490c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXclMjB5ZWFyJTIwY2VsZWJyYXRpb24lMjBmaXJld29ya3N8ZW58MXx8fHwxNzc0ODA1MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Celebrazione Capodanno',
+    alt: 'fuochi d\'artificio per Capodanno e celebrazioni festive',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 5,
     src: 'https://images.unsplash.com/photo-1564415898471-63eb15e99038?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxweXJvdGVjaG5pY3MlMjBwcm9mZXNzaW9uYWwlMjBkaXNwbGF5fGVufDF8fHx8MTc3NDgwNTE3OXww&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Display professionale',
+    alt: 'spettacolo pirotecnico professionale autorizzato',
     span: 'col-span-1 row-span-1',
   },
   {
     id: 6,
     src: 'https://images.unsplash.com/photo-1761066644935-14551e47af49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGFya2xlciUyMGZvdW50YWluJTIwZmlyZXdvcmtzfGVufDF8fHx8MTc3NDgwNTE3NHww&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Fontane luminose',
+    alt: 'fontane luminose e stelline per eventi aziendali',
     span: 'col-span-2 row-span-1',
   },
 ];

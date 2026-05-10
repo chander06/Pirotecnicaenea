@@ -68,7 +68,7 @@ export function Offers() {
               <div className="aspect-[4/3] overflow-hidden relative">
                 <ImageWithFallback
                   src={offer.image}
-                  alt={offer.title}
+                  alt={`${offer.title} - ${offer.description} Pirotecnica Enea`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div

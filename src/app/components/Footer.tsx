@@ -60,20 +60,26 @@ export function Footer() {
             <div className="space-y-3 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" style={{ color: '#CF0300' }} />
-                <a href="tel:3206708992" className="hover:text-[#CF0300] transition-colors">
+                <a href="tel:+393206708992" className="hover:text-[#CF0300] transition-colors">
                   320 670 8992
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" style={{ color: '#CF0300' }} />
-                <a href="tel:0693734301" className="hover:text-[#CF0300] transition-colors">
+                <a href="tel:+390693734301" className="hover:text-[#CF0300] transition-colors">
                   06 937 4301
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" style={{ color: '#CF0300' }} />
-                <a href="tel:3924818136" className="hover:text-[#CF0300] transition-colors">
+                <a href="tel:+393924818136" className="hover:text-[#CF0300] transition-colors">
                   392 481 8136
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" style={{ color: '#CF0300' }} />
+                <a href="mailto:pirotecnica.enea@virgilio.it" className="hover:text-[#CF0300] transition-colors">
+                  pirotecnica.enea@virgilio.it
                 </a>
               </div>
             </div>
@@ -83,11 +89,16 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-            <p>
-              © {currentYear} Pirotecnica Enea Srl. Tutti i diritti riservati.
-            </p>
+            <div className="flex items-center gap-4">
+              <p>
+                © {currentYear} Pirotecnica Enea Srl. Tutti i diritti riservati.
+              </p>
+              <a href="/sitemap.xml" className="hover:text-[#CF0300] transition-colors">
+                Sitemap
+              </a>
+            </div>
             <p className="text-center md:text-right">
-              P.IVA 12345678901 • Vendita autorizzata ai sensi del T.U.L.P.S.
+              P.IVA 11139091000 • Vendita autorizzata ai sensi del T.U.L.P.S.
             </p>
           </div>
         </div>

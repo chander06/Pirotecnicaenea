@@ -29,6 +29,7 @@ export function Navigation() {
     { name: 'Servizi', id: 'servizi' },
     { name: 'Galleria', id: 'galleria' },
     { name: 'Sicurezza', id: 'sicurezza' },
+    { name: 'FAQ', id: 'faq' },
     { name: 'Contatti', id: 'contatti' },
   ];
 

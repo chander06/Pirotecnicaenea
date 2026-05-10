@@ -62,7 +62,7 @@ export function Stores() {
               <div className="aspect-[16/10] overflow-hidden">
                 <ImageWithFallback
                   src={store.image}
-                  alt={store.name}
+                  alt={`Negozio Pirotecnica Enea ${store.name} - ${store.city}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
