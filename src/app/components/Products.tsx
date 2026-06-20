@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, Tag, Star, Flame, Crosshair, Rocket, Percent } from 'lucide-react';
+import { ChevronDown, Tag, Star, Flame, Crosshair, Rocket, Percent, Zap } from "lucide-react";
 
 const NOTE_BRANDS =
   "I materiali possono variare in base alla disponibilità, poiché siamo rivenditori ufficiali di: Jupiter · Pirotecnica Volpe · Piropassione · Gold Dragon · Pirotecnica Europea · Teanese ed altri brand leader del settore.";
@@ -12,7 +12,8 @@ const YELLOW = '#FDD828';
 
 interface Product {
   name: string;
-  price: number | null; // null = "chiedi in negozio"
+  price: number | null;
+  priceLabel?: string; // overrides price display (e.g. "€5 – €10")
   note?: string;
 }
 
@@ -96,6 +97,31 @@ const categories: Category[] = [
     ],
   },
   {
+    id: 'scoppio',
+    label: 'Scoppio',
+    badge: 'Cat. VC · F2 · P1 · T1',
+    icon: <Zap className="w-5 h-5" />,
+    subCategories: [
+      {
+        id: 'scoppio-prodotti',
+        label: 'Tutte le varianti',
+        products: [
+          { name: 'Mini Thunder — 6 pz', price: 10.0 },
+          { name: 'Falco — 10 pz', price: 15.0 },
+          { name: 'Lupo — 10 pz', price: 15.0 },
+          { name: 'Monello — 10 pz', price: 15.0 },
+          { name: 'Titano — 20 pz', price: 15.0 },
+          { name: 'Toro — 10 pz', price: 10.0 },
+          { name: 'Ultra — 10 pz', price: 15.0 },
+          { name: 'Tiger — 4 pz', price: 8.0 },
+          { name: 'Magnum F2 — scatola', price: null, priceLabel: '€10 – €15', note: 'Cat. F2 · varie marche e confezioni · €0,50 al pezzo' },
+          { name: 'Track Caramella — 15 pz', price: 25.0, note: 'Cat. F2' },
+          { name: 'Track Rendilo — 10 pz', price: 25.0, note: 'Cat. F2' },
+        ],
+      },
+    ],
+  },
+  {
     id: 'razzi',
     label: 'Razzi',
     badge: 'Cat. VC · Cat. IV',
@@ -105,7 +131,16 @@ const categories: Category[] = [
         id: 'razzi-prodotti',
         label: 'Tutte le varianti',
         products: [
-          { name: 'Razzi Vario', price: null, note: 'varie varianti disponibili' },
+          { name: 'Razzi Fischi a Botto — 12 pz', price: 2.0, note: 'Cat. F2' },
+          { name: 'Razzi Scopette Mix — imballo', price: null, priceLabel: '€5 – €10' },
+          { name: 'Razzi Piccoli Mix — 5 pz', price: 10.0, note: 'Cat. F2' },
+          { name: 'Buste Mix — vari pezzi', price: null, priceLabel: '€10 – €30' },
+          { name: 'Razzi Coppia Superbomba', price: 15.0 },
+          { name: 'Razzi Tipo Enterprise — vari pezzi', price: null, priceLabel: 'da €15' },
+          { name: 'Blue Moon', price: 40.0, note: 'Cat. F3' },
+          { name: 'Razzo Supermix — Busta Assortita (piccola / media / grande)', price: null, priceLabel: '€15 – €40' },
+          { name: 'Razzo Cometa Mix — piccolo / medio / grande', price: null, priceLabel: '€15 – €20' },
+          { name: 'Fischi a Botto — conf. 144 pz', price: 20.0 },
         ],
       },
     ],
@@ -146,19 +181,15 @@ const categories: Category[] = [
     icon: <Flame className="w-5 h-5" />,
     subCategories: [
       {
-        id: 'candele-romane-prodotti',
-        label: 'Candele Romane',
+        id: 'candele-sparapalle-prodotti',
+        label: 'Tutti i prodotti',
         products: [
-          { name: 'Candele Romane', price: null, note: 'varie varianti disponibili' },
-        ],
-      },
-      {
-        id: 'sparapalle-prodotti',
-        label: 'Sparapalle',
-        products: [
-          { name: 'Sparapalle — 20 colpi', price: 10.0 },
-          { name: 'Sparapalle — 30 colpi', price: 15.0 },
-          { name: 'Sparapalle Gatling — 380 colpi', price: 30.0 },
+          { name: 'Candele Romane — 20 colpi', price: 10.0, note: 'Cat. F2' },
+          { name: 'Candele Romane — 30 colpi', price: 15.0, note: 'Cat. F2' },
+          { name: 'Candele Romane Gatling — 380 colpi', price: 30.0, note: 'Cat. F2' },
+          { name: 'Comete — Ø20mm', price: 10.0, note: 'Cat. F3' },
+          { name: 'Comete — Ø30mm', price: 15.0, note: 'Cat. F3' },
+          { name: 'Comete Mix', price: 15.0, note: 'Cat. F2' },
         ],
       },
     ],
@@ -239,13 +270,10 @@ function SubCategoryPanel({
                     )}
                   </div>
                   <div className="flex-shrink-0 text-right">
-                    {p.price !== null ? (
-                      <span
-                        className="text-sm font-bold tabular-nums"
-                        style={{ color: RED }}
-                      >
-                        {formatPrice(p.price)}
-                      </span>
+                    {p.priceLabel ? (
+                      <span className="text-sm font-bold" style={{ color: RED }}>{p.priceLabel}</span>
+                    ) : p.price !== null ? (
+                      <span className="text-sm font-bold tabular-nums" style={{ color: RED }}>{formatPrice(p.price)}</span>
                     ) : (
                       <span className="text-xs text-gray-400 italic">su richiesta</span>
                     )}
