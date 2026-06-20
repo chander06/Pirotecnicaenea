@@ -68,10 +68,12 @@ const categories: Category[] = [
         ],
       },
       {
-        id: 'offerte-busta-mix',
-        label: 'Offerta Busta Mix',
+        id: 'offerte-coni',
+        label: 'Offerte Coni',
         products: [
-          { name: 'Offerte in corso', price: null, note: 'chiedi in negozio per le promozioni del momento' },
+          { name: 'Cono Oro — 60 secondi', price: null, priceLabel: '€10 · 2 pz €15', note: 'Cat. F2' },
+          { name: 'Cono Argento — 60 secondi', price: null, priceLabel: '€10 · 2 pz €15', note: 'Cat. F2' },
+          { name: 'Cono Oro & Argento a Cambiamento — 90 secondi', price: null, priceLabel: '€15 · 2 pz €25', note: 'Cat. F2' },
         ],
       },
       {
