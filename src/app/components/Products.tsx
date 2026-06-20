@@ -60,6 +60,29 @@ const categories: Category[] = [
           { name: 'Offerte in corso', price: null, note: 'chiedi in negozio per le promozioni del momento' },
         ],
       },
+      {
+        id: 'offerte-candele-romane',
+        label: 'Offerte Candele Romane',
+        products: [
+          { name: 'Offerte in corso', price: null, note: 'chiedi in negozio per le promozioni del momento' },
+        ],
+      },
+      {
+        id: 'offerte-busta-mix',
+        label: 'Offerta Busta Mix',
+        products: [
+          { name: 'Offerte in corso', price: null, note: 'chiedi in negozio per le promozioni del momento' },
+        ],
+      },
+      {
+        id: 'offerte-fontane',
+        label: 'Offerte Fontane',
+        products: [
+          { name: 'Fontane Piccole', price: null, note: 'chiedi in negozio per le promozioni del momento' },
+          { name: 'Fontane Medie', price: null, note: 'chiedi in negozio per le promozioni del momento' },
+          { name: 'Fontane Grandi', price: null, note: 'chiedi in negozio per le promozioni del momento' },
+        ],
+      },
     ],
   },
   {
