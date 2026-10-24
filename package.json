@@ -1,0 +1,9 @@
+{
+  "name": "pirotecnica-enea",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sito statico Pirotecnica Enea S.r.l. — pubblicato da dist/",
+  "scripts": {
+    "build": "node -e \"const f=['index.html','support.js','_headers','robots.txt','sitemap.xml','404.html'];const m=f.filter(x=>!require('fs').existsSync('dist/'+x));if(m.length){console.error('Mancano in dist/: '+m.join(', '));process.exit(1)}console.log('dist/ pronta')\""
+  }
+}
