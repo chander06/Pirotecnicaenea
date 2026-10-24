@@ -1,7 +1,0 @@
-# Cloudflare Workers (static assets). Cloudflare Pages ignora questo file: imposta "Build output directory" = dist
-name = "pirotecnica-enea"
-compatibility_date = "2026-10-01"
-
-[assets]
-directory = "./dist"
-not_found_handling = "404-page"
